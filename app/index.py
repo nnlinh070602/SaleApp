@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    kw = request.args.get('kw')
     cates = dao.get_categories()
     prods = dao.get_products()
 
